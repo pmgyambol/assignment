@@ -8,6 +8,7 @@ filename="./json/$1.json"
 
 path=.:./jars/json-20220924.jar:./jars/org.apache.commons.io.jar:./jars/commons-lang3-3.12.0.jar
 
+[[ -d "./objs" ]] || mkdir "./objs"
 rm -rf "./objs/*.class"
 
 if [ "$2" == "m" ]; then
