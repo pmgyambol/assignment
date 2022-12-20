@@ -115,7 +115,11 @@ public class OrganizerJSON {
             newStatus = Status.get(st);
             Status s = (Status) newStatus.orElse(null);
             if( s != null ) {
+                // Веднага след промените на jsonMainObj се прави и обновяване на статусите в
+                // майлстоун и проекта, към които е принадлежала задачата; след което и се записват във файла
                 chainJSON.getTask().put("status", s.toString());
+                chainJSON.updateMilestoneStatus();
+                this.writeToJSON();
             }
             else {
                 System.out.printf("Въведения от Вас статут [%s] е невалиден! Опитайте отново.\n", st);
@@ -148,5 +152,19 @@ public class OrganizerJSON {
         }
 
         return null;
+    }
+
+
+    /*
+     * Този метод записва моментното състояние на JSONObject jsonMainObj във файла,
+     * от който го е класа го е прочел при инициализацията.
+     */
+    private void writeToJSON() {
+        try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(this.filename))) {
+            this.jsonMainObj.write(writer, 2, 0);
+            writer.write("\n");
+        } catch (Exception ex) {
+            System.err.println("Проблем при записването на промените.\n" + ex.getMessage());
+        }
     }
 }

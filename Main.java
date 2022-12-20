@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        OrganizerJSON json = new OrganizerJSON(args[0]);
         while( true ) {
+            OrganizerJSON json = new OrganizerJSON(args[0]);
             json.printTreeView();
             System.out.printf("\nЗа промени натиснете д(а); за изход произволен друг клавиш: ");
             Scanner in = new Scanner(System.in);
