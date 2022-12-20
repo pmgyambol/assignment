@@ -119,6 +119,7 @@ public class OrganizerJSON {
                 // майлстоун и проекта, към които е принадлежала задачата; след което и се записват във файла
                 chainJSON.getTask().put("status", s.toString());
                 chainJSON.updateMilestoneStatus();
+                chainJSON.updateProjectStatus();
                 this.writeToJSON();
             }
             else {

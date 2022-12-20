@@ -42,4 +42,24 @@ public class ChainJSON {
         else if( allAreFinish ) { this.milestone.put("status", Status.FINISHED.toString()); }
         else                    { this.milestone.put("status", Status.PROGRESS.toString()); }
     }
+
+
+    /*
+     * Обновява информацията за ключа "milestone" съобразно изискванията IV
+     * на задачата
+     */
+    public void updateProjectStatus() {
+        boolean allAreNew     = true;
+        boolean allAreFinish  = true;
+        JSONArray milestones = this.project.getJSONArray("milestones");
+        for(int i = 0; i < milestones.length(); i++) {
+            Optional<Status> status = Status.get(milestones.getJSONObject(i).getString("status"));
+            Status s = (Status) status.orElse(null);
+            if( s == Status.NEW      || s == Status.PROGRESS ) { allAreFinish = false; }
+            if( s == Status.FINISHED || s == Status.PROGRESS ) { allAreNew    = false; }
+        }
+        if     ( allAreNew )    { this.project.put("status", Status.NEW.toString()); }
+        else if( allAreFinish ) { this.project.put("status", Status.FINISHED.toString()); }
+        else                    { this.project.put("status", Status.PROGRESS.toString()); }
+    }
 }

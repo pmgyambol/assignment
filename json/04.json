@@ -40,10 +40,10 @@
             "milestoneId": 2,
             "name": "Задача 2.2",
             "id": 4,
-            "status": "Нов"
+            "status": "В процес"
           }
         ],
-        "status": "Нов"
+        "status": "В процес"
       }
     ],
     "status": "В процес"
@@ -87,10 +87,10 @@
             "milestoneId": 2,
             "name": "Задача 2.2",
             "id": 11,
-            "status": "Нов"
+            "status": "Завършен"
           }
         ],
-        "status": "Нов"
+        "status": "В процес"
       }
     ],
     "status": "В процес"

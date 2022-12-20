@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Optional;
 
 public enum Status {
-        
+
     NEW      ("Нов"),
     PROGRESS ("В процес"),
     FINISHED ("Завършен");
