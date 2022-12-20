@@ -1,0 +1,99 @@
+{"projects": [
+  {
+    "extra": "Stuff",
+    "name": "Проект 1",
+    "id": 1,
+    "milestones": [
+      {
+        "name": "Майлстоун 1.1",
+        "id": 1,
+        "projectId": 1,
+        "нещо на кирилица": "тествам",
+        "tasks": [
+          {
+            "milestoneId": 1,
+            "name": "Задача 1.1",
+            "id": 1,
+            "status": "Завършен"
+          },
+          {
+            "milestoneId": 1,
+            "name": "Задача 1.2",
+            "id": 2,
+            "status": "Нов"
+          }
+        ],
+        "status": "В процес"
+      },
+      {
+        "name": "Майлстоун 2.1",
+        "id": 2,
+        "projectId": 1,
+        "tasks": [
+          {
+            "milestoneId": 2,
+            "name": "Задача 2.1",
+            "id": 3,
+            "status": "В процес"
+          },
+          {
+            "milestoneId": 2,
+            "name": "Задача 2.2",
+            "id": 4,
+            "status": "Нов"
+          }
+        ],
+        "status": "В процес"
+      }
+    ],
+    "status": "В процес"
+  },
+  {
+    "name": "Проект 2",
+    "id": 1,
+    "milestones": [
+      {
+        "name": "Майлстоун 1.1",
+        "id": 1,
+        "projectId": 1,
+        "tasks": [
+          {
+            "milestoneId": 1,
+            "name": "Задача 1.1",
+            "id": 5,
+            "status": "Нов"
+          },
+          {
+            "milestoneId": 1,
+            "name": "Задача 1.2",
+            "id": 6,
+            "status": "Нов"
+          }
+        ],
+        "status": "Нов"
+      },
+      {
+        "name": "Майлстоун 2.1",
+        "id": 2,
+        "projectId": 1,
+        "tasks": [
+          {
+            "milestoneId": 2,
+            "name": "Задача 2.1",
+            "id": 10,
+            "status": "Завършен"
+          },
+          {
+            "milestoneId": 2,
+            "name": "Задача 2.2",
+            "id": 11,
+            "status": "Завършен"
+          }
+        ],
+        "status": "Завършен"
+      }
+    ],
+    "status": "В процес"
+  }
+]}
+

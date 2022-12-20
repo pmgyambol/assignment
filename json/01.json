@@ -1,0 +1,51 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Проект 1",
+      "status": "Нов",
+      "milestones": [
+        {
+          "id": 1,
+          "projectId": 1,
+          "name": "Майлстоун 1.1",
+          "status": "Нов",
+          "tasks": [
+            {
+              "id": 1,
+              "milestoneId": 1,
+              "name": "Задача 1.1",
+              "status": "Нов"
+            },
+            {
+              "id": 2,
+              "milestoneId": 1,
+              "name": "Задача 1.2",
+              "status": "Нов"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "projectId": 1,
+          "name": "Майлстоун 2.1",
+          "status": "Нов",
+          "tasks": [
+            {
+              "milestoneId": 2,
+              "id": 3,
+              "name": "Задача 2.1",
+              "status": "Нов"
+            },
+            {
+              "milestoneId": 2,
+              "id": 4,
+              "name": "Задача 2.2",
+              "status": "Нов"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
